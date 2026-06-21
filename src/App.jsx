@@ -19,6 +19,9 @@ const WordToPdf = lazy(() => import("./tools/WordToPdf"));
 const ImageCompressor = lazy(() => import("./tools/ImageCompressor"));
 const PdfCompressor = lazy(() => import("./tools/PdfCompressor"));
 const PdfToolkit = lazy(() => import("./tools/PdfToolkit"));
+const FocusTimer = lazy(() => import("./tools/FocusTimer"));
+const Flashcards = lazy(() => import("./tools/Flashcards"));
+const QuickNotes = lazy(() => import("./tools/QuickNotes"));
 
 const toolComponents = {
   "image-to-pdf": ImageToPdf,
@@ -26,6 +29,9 @@ const toolComponents = {
   "image-compressor": ImageCompressor,
   "pdf-compressor": PdfCompressor,
   "pdf-toolkit": PdfToolkit,
+  pomodoro: FocusTimer,
+  flashcards: Flashcards,
+  notes: QuickNotes,
 };
 
 export default function App() {

@@ -1,0 +1,320 @@
+/* ============================================================
+   Syntriq Studio — global design system
+   Every theme is just an override of these CSS variables.
+   Default (:root) == "Liquid Glass".
+   ============================================================ */
+
+:root,
+[data-theme="glass"] {
+  --bg-0: #070712;
+  --bg-grad: radial-gradient(130% 120% at 50% -10%, #16163a 0%, #0a0a1c 45%, #060611 100%);
+
+  --ink: #ecebff;
+  --ink-soft: #b7b6d6;
+  --ink-dim: #7d7c9c;
+
+  /* accent palette (also drives the background blobs) */
+  --violet: #7c5cff;
+  --blue: #4d9fff;
+  --teal: #37e6c0;
+  --pink: #ff6fae;
+
+  --glass: rgba(255, 255, 255, 0.055);
+  --glass-strong: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-soft: rgba(255, 255, 255, 0.07);
+  --sheen: 0.5;
+  /* the "glassiness": blur, the backdrop blobs, the active-nav pill.
+     A flat theme just turns these off. Inherited by every theme via :root. */
+  --glass-blur: blur(28px) saturate(160%);
+  --hero-glow-op: 1;
+  --active-bg: linear-gradient(100deg, rgba(124, 92, 255, 0.32), rgba(77, 159, 255, 0.22));
+  --active-border: rgba(255, 255, 255, 0.14);
+  --active-ink: #ffffff;
+
+  --danger-ink: #ffc4ce;
+  --danger-bg: rgba(255, 90, 110, 0.12);
+  --danger-border: rgba(255, 90, 110, 0.3);
+  --warn-ink: #ffc4a0;
+  --warn-bg: rgba(255, 160, 90, 0.14);
+
+  --inset: rgba(0, 0, 0, 0.25);
+  --inset-2: rgba(0, 0, 0, 0.3);
+  --hover: rgba(255, 255, 255, 0.05);
+
+  --grid-line: rgba(255, 255, 255, 0.035);
+  --blob-opacity: 0.55;
+  --noise-opacity: 0.025;
+  --scroll-thumb: rgba(255, 255, 255, 0.12);
+  --scroll-thumb-h: rgba(255, 255, 255, 0.22);
+
+  --shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.6);
+  --shadow-soft: 0 8px 30px -12px rgba(0, 0, 0, 0.55);
+}
+
+/* ---- Midnight: clean, cool graphite dark ---- */
+[data-theme="midnight"] {
+  --bg-0: #0a0c12;
+  --bg-grad: radial-gradient(130% 120% at 50% -10%, #1b2233 0%, #11151f 45%, #0a0c12 100%);
+
+  --ink: #e9edf6;
+  --ink-soft: #a7b1c4;
+  --ink-dim: #6c7689;
+
+  --violet: #5b7cff;
+  --blue: #3f9bff;
+  --teal: #37c9d8;
+  --pink: #7e93b8;
+
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass-strong: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-soft: rgba(255, 255, 255, 0.055);
+  --sheen: 0.4;
+
+  --inset: rgba(0, 0, 0, 0.28);
+  --inset-2: rgba(0, 0, 0, 0.34);
+  --hover: rgba(255, 255, 255, 0.045);
+
+  --grid-line: rgba(255, 255, 255, 0.028);
+  --blob-opacity: 0.3;
+  --noise-opacity: 0.02;
+  --scroll-thumb: rgba(255, 255, 255, 0.1);
+  --scroll-thumb-h: rgba(255, 255, 255, 0.2);
+
+  --shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+  --shadow-soft: 0 8px 30px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* ---- Aurora: deep teal / emerald / cyan ---- */
+[data-theme="aurora"] {
+  --bg-0: #021413;
+  --bg-grad: radial-gradient(130% 120% at 50% -10%, #073433 0%, #04201f 45%, #021312 100%);
+
+  --ink: #e6fff8;
+  --ink-soft: #a6d8cd;
+  --ink-dim: #6f9c92;
+
+  --violet: #19c39a;
+  --blue: #2bd4ff;
+  --teal: #5ff0c2;
+  --pink: #34a0ff;
+
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-strong: rgba(255, 255, 255, 0.085);
+  --glass-border: rgba(150, 255, 230, 0.16);
+  --glass-border-soft: rgba(150, 255, 230, 0.08);
+  --sheen: 0.45;
+
+  --inset: rgba(0, 20, 18, 0.32);
+  --inset-2: rgba(0, 20, 18, 0.4);
+  --hover: rgba(120, 255, 220, 0.06);
+
+  --grid-line: rgba(120, 255, 220, 0.04);
+  --blob-opacity: 0.5;
+  --noise-opacity: 0.022;
+  --scroll-thumb: rgba(150, 255, 230, 0.14);
+  --scroll-thumb-h: rgba(150, 255, 230, 0.26);
+
+  --shadow: 0 24px 60px -20px rgba(0, 30, 26, 0.65);
+  --shadow-soft: 0 8px 30px -12px rgba(0, 30, 26, 0.55);
+}
+
+/* ---- Nebula: cosmic indigo / magenta / violet ---- */
+[data-theme="nebula"] {
+  --bg-0: #0b0518;
+  --bg-grad: radial-gradient(130% 120% at 50% -10%, #2a1247 0%, #170b2c 45%, #0b0518 100%);
+
+  --ink: #f3ecff;
+  --ink-soft: #c9b8e6;
+  --ink-dim: #8d7bab;
+
+  --violet: #a25bff;
+  --blue: #6c5cff;
+  --teal: #ff63d2;
+  --pink: #ff5c95;
+
+  --glass: rgba(255, 255, 255, 0.055);
+  --glass-strong: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(220, 180, 255, 0.16);
+  --glass-border-soft: rgba(220, 180, 255, 0.08);
+  --sheen: 0.5;
+
+  --inset: rgba(20, 5, 35, 0.34);
+  --inset-2: rgba(20, 5, 35, 0.42);
+  --hover: rgba(200, 150, 255, 0.06);
+
+  --grid-line: rgba(200, 150, 255, 0.045);
+  --blob-opacity: 0.55;
+  --noise-opacity: 0.025;
+  --scroll-thumb: rgba(220, 180, 255, 0.14);
+  --scroll-thumb-h: rgba(220, 180, 255, 0.26);
+
+  --shadow: 0 24px 60px -20px rgba(20, 0, 40, 0.7);
+  --shadow-soft: 0 8px 30px -12px rgba(20, 0, 40, 0.6);
+}
+
+/* ---- Professional: flat, clean white — the default. No glass effects. ---- */
+[data-theme="professional"] {
+  --bg-0: #f4f6fa;
+  --bg-grad: #f4f6fa; /* flat, solid — no gradient */
+
+  --ink: #111827;
+  --ink-soft: #515a6b;
+  --ink-dim: #8a93a3;
+
+  --violet: #6d4bff;
+  --blue: #2f6bff;
+  --teal: #0fb488;
+  --pink: #ff5d8a;
+
+  /* solid white surfaces with crisp borders — no translucency */
+  --glass: #ffffff;
+  --glass-strong: #ffffff;
+  --glass-border: #e4e7ec;
+  --glass-border-soft: #eceef2;
+  --sheen: 0; /* kill the glassy top highlight */
+  --glass-blur: none; /* kill the backdrop blur */
+  --hero-glow-op: 0; /* kill the colored hero glow */
+
+  --active-bg: rgba(47, 107, 255, 0.1);
+  --active-border: rgba(47, 107, 255, 0.22);
+  --active-ink: #2f6bff;
+
+  --danger-ink: #b42318;
+  --danger-bg: #fef3f2;
+  --danger-border: #fecdca;
+  --warn-ink: #b54708;
+  --warn-bg: #fff6ea;
+
+  --inset: #f2f4f7;
+  --inset-2: #eef1f5;
+  --hover: #f3f5f8;
+
+  --grid-line: transparent; /* no grid */
+  --blob-opacity: 0; /* no background blobs */
+  --noise-opacity: 0; /* no noise */
+  --scroll-thumb: rgba(17, 24, 39, 0.16);
+  --scroll-thumb-h: rgba(17, 24, 39, 0.28);
+
+  /* subtle, business-like shadows */
+  --shadow: 0 8px 24px -10px rgba(16, 24, 40, 0.14);
+  --shadow-soft: 0 1px 2px rgba(16, 24, 40, 0.06), 0 2px 8px -2px rgba(16, 24, 40, 0.08);
+}
+
+/* ---------- shared (theme-independent) ---------- */
+:root {
+  --r-lg: 28px;
+  --r-md: 20px;
+  --r-sm: 14px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: var(--bg-0);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  transition: background 0.5s var(--ease), color 0.5s var(--ease);
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+::selection {
+  background: rgba(124, 92, 255, 0.4);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-h);
+  background-clip: content-box;
+}
+
+/* ---- glass primitive ---- */
+.glass {
+  background: var(--glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  transition: background 0.5s var(--ease), border-color 0.5s var(--ease);
+}
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0) 35%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: var(--sheen);
+  pointer-events: none;
+}
+
+.grad-text {
+  background: linear-gradient(100deg, var(--violet), var(--blue) 45%, var(--teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(124, 92, 255, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

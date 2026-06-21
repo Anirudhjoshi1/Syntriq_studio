@@ -1,0 +1,14 @@
+[build]
+  command = "vite build"
+  publish = "dist"
+
+# SPA fallback (static files are served first, so sw.js / assets are untouched)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

@@ -864,6 +864,196 @@
   }
 }
 
+/* ---------- pdf toolkit ---------- */
+.pdft-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: var(--r-md);
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.pdft-tool-info {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.pdft-tool-info svg {
+  color: var(--violet);
+}
+.pdft-tool-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pdft-name {
+  width: 200px;
+  padding: 0 12px;
+}
+.pdft-name input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--ink);
+  font-size: 13.5px;
+  padding: 9px 0;
+  min-width: 0;
+  width: 100%;
+}
+.pdft-export {
+  width: auto;
+  padding: 11px 18px;
+  font-size: 14px;
+}
+
+.pdft-selbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--r-sm);
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  border-color: rgba(124, 92, 255, 0.4) !important;
+}
+.pdft-sel-count {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--violet);
+}
+.pdft-sel-actions {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.pdft-grid-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 4px 12px;
+}
+
+.pdft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 14px;
+}
+.pdft-page {
+  border-radius: var(--r-sm);
+  cursor: grab;
+  user-select: none;
+}
+.pdft-page:active {
+  cursor: grabbing;
+}
+.pdft-thumb {
+  position: relative;
+  aspect-ratio: 1 / 1.3;
+  background: var(--inset-2);
+  border: 1.5px solid var(--glass-border-soft);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.pdft-page.sel .pdft-thumb {
+  border-color: var(--violet);
+  box-shadow: 0 0 0 2px var(--violet), 0 12px 26px -12px var(--violet);
+}
+.pdft-thumb img {
+  max-width: 90%;
+  max-height: 92%;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s var(--ease);
+}
+.pdft-srcdot {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+.pdft-check {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  transition: background 0.2s;
+}
+.pdft-check.on {
+  background: var(--violet);
+  border-color: var(--violet);
+}
+.pdft-pagenum {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+}
+.pdft-page-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 8px;
+}
+.pdft-page-actions button {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: var(--ink-soft);
+  background: var(--glass);
+  border: 1px solid var(--glass-border-soft);
+  transition: all 0.2s;
+}
+.pdft-page-actions button:hover {
+  color: var(--ink);
+  background: var(--hover);
+}
+.pdft-page-actions button.del:hover {
+  color: #ff8597;
+  background: rgba(255, 90, 110, 0.12);
+}
+.pdft-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+}
+.pdft-loading svg {
+  color: var(--violet);
+}
+
 /* ---------- pdf compressor ---------- */
 .pdfc-card {
   display: flex;

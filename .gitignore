@@ -31,3 +31,4 @@ test/themes/
 test/*.png
 test/*.pdf
 test/*.docx
+test/pdft/

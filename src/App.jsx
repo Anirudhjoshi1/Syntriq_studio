@@ -18,12 +18,14 @@ const ImageToPdf = lazy(() => import("./tools/ImageToPdf"));
 const WordToPdf = lazy(() => import("./tools/WordToPdf"));
 const ImageCompressor = lazy(() => import("./tools/ImageCompressor"));
 const PdfCompressor = lazy(() => import("./tools/PdfCompressor"));
+const PdfToolkit = lazy(() => import("./tools/PdfToolkit"));
 
 const toolComponents = {
   "image-to-pdf": ImageToPdf,
   "word-to-pdf": WordToPdf,
   "image-compressor": ImageCompressor,
   "pdf-compressor": PdfCompressor,
+  "pdf-toolkit": PdfToolkit,
 };
 
 export default function App() {

@@ -22,6 +22,7 @@ const PdfToolkit = lazy(() => import("./tools/PdfToolkit"));
 const FocusTimer = lazy(() => import("./tools/FocusTimer"));
 const Flashcards = lazy(() => import("./tools/Flashcards"));
 const QuickNotes = lazy(() => import("./tools/QuickNotes"));
+const Ocr = lazy(() => import("./tools/Ocr"));
 
 const toolComponents = {
   "image-to-pdf": ImageToPdf,
@@ -29,6 +30,7 @@ const toolComponents = {
   "image-compressor": ImageCompressor,
   "pdf-compressor": PdfCompressor,
   "pdf-toolkit": PdfToolkit,
+  ocr: Ocr,
   pomodoro: FocusTimer,
   flashcards: Flashcards,
   notes: QuickNotes,

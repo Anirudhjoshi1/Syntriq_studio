@@ -91,13 +91,13 @@ export const tools = [
     ready: true,
   },
   {
-    id: "scanner",
-    name: "Doc Scanner",
-    tagline: "Auto-crop & enhance scanned pages",
+    id: "ocr",
+    name: "Image to Text",
+    tagline: "Pull text out of photos, scans & PDFs (OCR)",
     icon: ScanLine,
     accent: ["#4d9fff", "#37e6c0"],
     category: "Documents",
-    ready: false,
+    ready: true,
   },
   {
     id: "summarizer",

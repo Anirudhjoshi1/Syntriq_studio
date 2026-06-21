@@ -2409,3 +2409,125 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   OCR — Image to Text
+   ============================================================ */
+.ocr-files {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ocr-file {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 13px;
+  border-radius: var(--r-sm);
+}
+.ocr-file-ic {
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  flex-shrink: 0;
+}
+.ocr-file-name {
+  flex: 1;
+  font-size: 13.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ocr-output {
+  border-radius: var(--r-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ocr-out-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.ocr-out-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.ocr-out-actions {
+  display: flex;
+  gap: 4px;
+}
+.ocr-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.ocr-progress-bar {
+  height: 7px;
+  border-radius: 999px;
+  background: var(--inset-2);
+  overflow: hidden;
+}
+.ocr-progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--violet), var(--blue));
+  transition: width 0.3s var(--ease);
+}
+.ocr-progress-txt {
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.ocr-textarea {
+  width: 100%;
+  min-height: 280px;
+  resize: vertical;
+  background: var(--inset);
+  border: 1px solid var(--glass-border-soft);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.65;
+  font-family: "Inter", monospace;
+  outline: none;
+}
+.ocr-textarea:focus {
+  border-color: rgba(124, 92, 255, 0.5);
+}
+.ocr-lang-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.ocr-lang {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--inset);
+  border: 1px solid var(--glass-border-soft);
+  transition: all 0.2s;
+}
+.ocr-lang:hover:not(:disabled) {
+  color: var(--ink);
+  background: var(--hover);
+}
+.ocr-lang.active {
+  color: #fff;
+  background: linear-gradient(120deg, var(--violet), var(--blue));
+  border-color: transparent;
+}
+.ocr-lang:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.ocr-clear {
+  justify-content: center;
+}
